@@ -6,6 +6,7 @@
 
 .byebug_history
 .idea/
+.rubocop.yml
 
 # Ignore bundler config.
 /.bundle
