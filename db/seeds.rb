@@ -12,11 +12,11 @@
 @backend = Category.create(title: 'Backend')
 @frontend = Category.create(title: 'Frontend')
 
-@test1 = @backend.tests.create(title: 'Ruby', level: 0)
-@test2 = @backend.tests.create(title: 'Rails', level: 2)
-@test3 = @frontend.tests.create(title: 'JavaScript', level: 1)
-@test4 = @frontend.tests.create(title: 'HTML', level: 0)
-@test5 = @frontend.tests.create(title: 'CSS', level: 1)
+@test1 = @backend.tests.create(title: 'Ruby', level: 0, user_id: @user1.id)
+@test2 = @backend.tests.create(title: 'Rails', level: 2, user_id: @user2.id)
+@test3 = @frontend.tests.create(title: 'JavaScript', level: 1, user_id: @user2.id)
+@test4 = @frontend.tests.create(title: 'HTML', level: 0, user_id: @user1.id)
+@test5 = @frontend.tests.create(title: 'CSS', level: 1, user_id: @user2.id)
 
 @question1 = @test1.questions.create(body: 'Что вернет 2.superclass в версии Ruby 3.0?')
 @question2 = @test2.questions.create(body: 'Команда для отката миграций назад и обратно')
