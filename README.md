@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Тест
+
+Пользователь
+
+Вопрос
+
+Варианты
+
+Баллы
