@@ -1,0 +1,7 @@
+<p>ID вопроса <%= @question.id %></p>
+<p>Текст вопроса <%= @question.body %></p>
+
+<form action="/questions/<%= @question.id %>" method="delete">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Удалить вопрос">
+</form>
