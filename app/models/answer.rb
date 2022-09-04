@@ -1,5 +1,5 @@
 class Answer < ApplicationRecord
-  NUMBER_OF_PERMITTED_ANSWERS = 4
+  MAX_ANSWERS = 4
 
   belongs_to :question
 
@@ -12,8 +12,8 @@ class Answer < ApplicationRecord
   private
 
   def questions_answers_limit
-    if question_id && question.answers.count >= NUMBER_OF_PERMITTED_ANSWERS
-      errors.add(:question_id, 'Answer cannot be added to that question')
-    end
+    return unless question && question.answers.count >= MAX_ANSWERS
+
+    errors.add(:question_id, "can have a maximum of #{MAX_ANSWERS} answers.")
   end
 end

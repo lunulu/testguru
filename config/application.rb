@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Testguru
+module TestGuru
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
@@ -16,6 +16,7 @@ module Testguru
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.time_zone = 'Moscow'
-    config.i18n.default_locale = :ru
+    # Поставил обратно на английский, из-за ошибок translation missing в errors.messages
+    config.i18n.default_locale = :en
   end
 end

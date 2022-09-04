@@ -4,7 +4,6 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-.byebug_history
 .idea/
 .rubocop.yml
 
@@ -32,4 +31,7 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
+/config/master.key d
+/test.sqlite3
 /config/master.key
+/development.sqlite3
