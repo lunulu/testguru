@@ -10,8 +10,8 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'user_id'
 
   scope :easy_level, -> { where(level: 0..1) }
-  scope :medium_level, -> { where(level: 2..4) }
-  scope :hard_level, -> { where(level: 5..MAX_LEVEL) }
+  scope :medium_level, -> { where(level: 2) }
+  scope :hard_level, -> { where(level: 3..MAX_LEVEL) }
   scope :all_by_category, ->(category_title) { joins(:category).where(categories: { title: category_title }) }
 
   validates :title, presence: true, uniqueness: { scope: :level }
