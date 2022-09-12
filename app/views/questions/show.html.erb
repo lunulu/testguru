@@ -1,7 +1,6 @@
-<p>ID вопроса <%= @question.id %></p>
-<p>Текст вопроса <%= @question.body %></p>
+<p>Question ID <%= @question.id %></p>
+<p>Question body <%= @question.body %></p>
 
-<form action="/questions/<%= @question.id %>" method="delete">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="submit" value="Удалить вопрос">
-</form>
+<%= link_to 'Delete', question_path(@question), method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to 'Edit', edit_question_path(@question) %>
+<%= link_to 'Back', test_path(@question.test) %>
