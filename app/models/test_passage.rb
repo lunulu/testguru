@@ -1,4 +1,6 @@
 class TestPassage < ApplicationRecord
+  SUCCESS_RATIO = 0.85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -9,6 +11,10 @@ class TestPassage < ApplicationRecord
 
   def completed?
     current_question.nil?
+  end
+
+  def success?
+    correct_questions / test.questions.count.to_f >= SUCCESS_RATIO
   end
 
   def accept!(answer_ids)
