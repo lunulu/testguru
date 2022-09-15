@@ -12,3 +12,5 @@
 
   <p><%= form.submit 'Next' %></p>
 <% end %>
+
+<p>Question <%= current_question_number(@test_passage) %> of <%= @test_passage.test.questions.count %></p>
