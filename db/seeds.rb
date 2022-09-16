@@ -37,10 +37,10 @@
 @question5.answers.create(body: 'text-size')
 @question5.answers.create(body: 'font-size', correct: true)
 
-@user1.test_passages.create([{ test: @test1, completed: true },
-                             { test: @test3, completed: false }])
-@user2.test_passages.create([{ test: @test1, completed: true },
-                             { test: @test2, completed: true },
-                             { test: @test3, completed: true },
-                             { test: @test4, completed: true },
-                             { test: @test5, completed: true }])
+# @user1.test_passages.create([{ test: @test1, completed: true },
+#                              { test: @test3, completed: false }])
+# @user2.test_passages.create([{ test: @test1, completed: true },
+#                              { test: @test2, completed: true },
+#                              { test: @test3, completed: true },
+#                              { test: @test4, completed: true },
+#                              { test: @test5, completed: true }])
