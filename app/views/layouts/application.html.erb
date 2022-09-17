@@ -12,6 +12,10 @@
   <body>
     <%= render 'shared/header' %>
 
+    <% if logged_in? %>
+      <p class="nav user">Welcome, <b><%= current_user.name %></b></p>
+    <% end %>
+
     <%= yield %>
 
   <%= render 'shared/footer' %>
