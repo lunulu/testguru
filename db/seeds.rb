@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-@user1 = User.create(name: 'Ruslan', age: 22, email: 'fairus200599@gmail.com')
-@user2 = User.create(name: 'Almighty', age: 42, email: 'dont@need.it')
+@user1 = User.create(name: 'Admin', email: 'fairus200599@gmail.com', password_digest: BCrypt::Password.create('123'))
+@user2 = User.create(name: 'Template', email: 'example@mail.com', password_digest: BCrypt::Password.create('123'))
 
 @backend = Category.create(title: 'Backend')
 @frontend = Category.create(title: 'Frontend')
@@ -36,11 +36,3 @@
 @question4.answers.create(body: 'Относительным', correct: true)
 @question5.answers.create(body: 'text-size')
 @question5.answers.create(body: 'font-size', correct: true)
-
-# @user1.test_passages.create([{ test: @test1, completed: true },
-#                              { test: @test3, completed: false }])
-# @user2.test_passages.create([{ test: @test1, completed: true },
-#                              { test: @test2, completed: true },
-#                              { test: @test3, completed: true },
-#                              { test: @test4, completed: true },
-#                              { test: @test5, completed: true }])
