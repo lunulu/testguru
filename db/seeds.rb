@@ -6,17 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-@user1 = User.create(name: 'Admin', email: 'fairus200599@gmail.com', password_digest: BCrypt::Password.create('123'))
-@user2 = User.create(name: 'Template', email: 'example@mail.com', password_digest: BCrypt::Password.create('123'))
+@admin = User.create(first_name: 'Ruslan', last_name: 'Faizullin', email: 'fairus200599@gmail.com', password: '123456', type: 'Admin')
 
 @backend = Category.create(title: 'Backend')
 @frontend = Category.create(title: 'Frontend')
 
-@test1 = @backend.tests.create(title: 'Ruby', level: 0, user_id: @user1.id)
-@test2 = @backend.tests.create(title: 'Rails', level: 2, user_id: @user2.id)
-@test3 = @frontend.tests.create(title: 'JavaScript', level: 1, user_id: @user2.id)
-@test4 = @frontend.tests.create(title: 'HTML', level: 0, user_id: @user1.id)
-@test5 = @frontend.tests.create(title: 'CSS', level: 1, user_id: @user2.id)
+@test1 = @backend.tests.create(title: 'Ruby', level: 0, user_id: @admin.id)
+@test2 = @backend.tests.create(title: 'Rails', level: 2, user_id: @admin.id)
+@test3 = @frontend.tests.create(title: 'JavaScript', level: 1, user_id: @admin.id)
+@test4 = @frontend.tests.create(title: 'HTML', level: 0, user_id: @admin.id)
+@test5 = @frontend.tests.create(title: 'CSS', level: 1, user_id: @admin.id)
 
 @question1 = @test1.questions.create(body: 'Что вернет 2.superclass в версии Ruby 3.0?')
 @question2 = @test2.questions.create(body: 'Команда для отката миграций назад и обратно')

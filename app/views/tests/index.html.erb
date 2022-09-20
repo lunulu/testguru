@@ -1,6 +1,4 @@
-<h2>All tests</h2>
-
-<p><%= link_to 'New Test', new_test_path %></p>
+<h2>Tricky tests</h2>
 
 <% if Test.all.present? %>
   <table>
@@ -8,7 +6,7 @@
       <th>Title</th>
       <th>Level</th>
       <th>Questions</th>
-      <th colspan="3">Actions</th>
+      <th>Action</th>
     </tr>
 
     <%= render @tests %>
