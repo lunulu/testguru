@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-@admin = User.create(first_name: 'Ruslan', last_name: 'Faizullin', email: 'fairus200599@gmail.com', password: '123456', type: 'Admin')
+@admin = Admin.create(first_name: 'Ruslan', last_name: 'Faizullin', email: 'fairus200599@gmail.com', password: '112358')
+@user = User.create(first_name: 'Bob', last_name: 'Green', email: 'bob@example.com', password: '112358')
+
+@admin.confirm
+@user.confirm
 
 @backend = Category.create(title: 'Backend')
 @frontend = Category.create(title: 'Frontend')
