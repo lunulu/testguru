@@ -1,7 +1,12 @@
 module TestsHelper
 
-  TEST_LEVELS = { 0 => 'very easy', 1 => 'easy', 2 => 'medium', 3 => 'hard', 4 => 'very hard', 5 => 'extreme' }.freeze
+  TEST_LEVELS = { 0 => I18n.t('tests_helper.very_easy'),
+                  1 => I18n.t('tests_helper.easy'),
+                  2 => I18n.t('tests_helper.medium'),
+                  3 => I18n.t('tests_helper.hard'),
+                  4 => I18n.t('tests_helper.very_hard'),
+                  5 => I18n.t('tests_helper.extreme') }.freeze
   def test_level(test)
-    TEST_LEVELS[test.level] || 'god'
+    TEST_LEVELS[test.level] || I18n.t('tests_helper.god')
   end
 end

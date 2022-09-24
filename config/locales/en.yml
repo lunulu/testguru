@@ -1,5 +1,7 @@
 en:
   helpers:
+    select:
+      prompt: "Please select:"
     submit:
       test:
         create: "Create Test"
@@ -15,22 +17,99 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    header:
+      header: "Main Page"
+    nav:
+      welcome: "Welcome"
+      settings: "Settings"
+      logout: "Logout"
+      sign_up: "Sign Up"
+      login: "Login"
+    footer:
+      about: "Website for passing various tests"
+      thinknetica: "Educational project at Thinknetica online school"
 
   tests:
     index:
       header: "Tricky tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Actions"
+      no_tests: "There is no tests yet."
+    test:
+      start: "Start"
 
   test_passages:
     result:
       header: "The %{title} test was completed!"
+      to_all_tests: "To all tests"
+    show:
+      header: "Passing the %{title} Test"
+      next: "Next"
+      question_counter: "Question %{current} of %{total}"
 
   admin:
+    nav:
+      header: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      settings: "Settings"
+      logout: "Logout"
     tests:
       create:
         success: 'Test was successfully created.'
       index:
         header: "Tricky tests"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+        no_tests: "There is no tests yet."
+        new_test: "New test"
+      show:
+        level: "Level: %{level}"
+        category: "Category: %{category}"
+        author: "Author: %{first_name} %{last_name}"
+        edit: "Edit test"
+        questions: "Questions list"
+        body: "Question"
+        actions: "Actions"
+        no_questions: "There is no questions for this test yet"
+        new_question: "New question"
+        back: "Back"
+      edit:
+        header: "Create new test"
+        back: "Back"
+      new:
+        header: "Edit test"
+        back: "Back"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+    questions:
+      question:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
+  users:
+    create:
+      hello: "Hello, %{first_name}!"
 
   tests_mailer:
     completed_test:
       subject: "You have completed the TestGuru test!"
+
+  tests_helper:
+    very_easy: "very easy"
+    easy: "easy"
+    medium: "medium"
+    hard: "hard"
+    very_hard: "very hard"
+    extreme: "extreme"
+    god: "god"
+
+  test_passages_helper:
+    success: "Test passed"
+    fail: "Test failed"
