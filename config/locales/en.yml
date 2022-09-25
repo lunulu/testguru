@@ -1,33 +1,115 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    select:
+      prompt: "Please select:"
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    header:
+      header: "Main Page"
+    nav:
+      welcome: "Welcome"
+      settings: "Settings"
+      logout: "Logout"
+      sign_up: "Sign Up"
+      login: "Login"
+    footer:
+      about: "Website for passing various tests"
+      thinknetica: "Educational project at Thinknetica online school"
+
+  tests:
+    index:
+      header: "Tricky tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Actions"
+      no_tests: "There is no tests yet."
+    test:
+      start: "Start"
+
+  test_passages:
+    result:
+      header: "The %{title} test was completed!"
+      to_all_tests: "To all tests"
+    show:
+      header: "Passing the %{title} Test"
+      next: "Next"
+      question_counter: "Question %{current} of %{total}"
+
+  admin:
+    nav:
+      header: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      settings: "Settings"
+      logout: "Logout"
+    tests:
+      create:
+        success: 'Test was successfully created.'
+      index:
+        header: "Tricky tests"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+        no_tests: "There is no tests yet."
+        new_test: "New test"
+      show:
+        level: "Level: %{level}"
+        category: "Category: %{category}"
+        author: "Author: %{first_name} %{last_name}"
+        edit: "Edit test"
+        questions: "Questions list"
+        body: "Question"
+        actions: "Actions"
+        no_questions: "There is no questions for this test yet"
+        new_question: "New question"
+        back: "Back"
+      edit:
+        header: "Create new test"
+        back: "Back"
+      new:
+        header: "Edit test"
+        back: "Back"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+    questions:
+      question:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
+  users:
+    create:
+      hello: "Hello, %{first_name}!"
+
+  tests_mailer:
+    completed_test:
+      subject: "You have completed the TestGuru test!"
+
+  tests_helper:
+    very_easy: "very easy"
+    easy: "easy"
+    medium: "medium"
+    hard: "hard"
+    very_hard: "very hard"
+    extreme: "extreme"
+    god: "god"
+
+  test_passages_helper:
+    success: "Test passed"
+    fail: "Test failed"

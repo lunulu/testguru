@@ -1,2 +1,117 @@
 ru:
-  hello: "Привет мир"
+  helpers:
+    select:
+      prompt: "Выберите:"
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружен %{count} ошибки"
+    header:
+      header: "Главная страница"
+    nav:
+      welcome: "Добро пожаловать"
+      settings: "Настройки"
+      logout: "Выйти"
+      sign_up: "Регистрация"
+      login: "Войти"
+    footer:
+      about: "Сайт для прохождения различных тестов"
+      thinknetica: "Учебный проект в онлайн-школе Thinknetica"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+      no_tests: "Тестов пока нет"
+    test:
+      start: "Начать"
+
+  test_passages:
+    result:
+      header: "Тест %{title} завершён!"
+      to_all_tests: "Ко всем тестам"
+    show:
+      header: "Прохождение теста %{title}"
+      next: "Дальше"
+      question_counter: "Вопрос %{current} из %{total}"
+
+  admin:
+    nav:
+      header: "Панель Админа TestGuru"
+      welcome: "Добро пожаловать"
+      settings: "Настройки"
+      logout: "Выйти"
+    tests:
+      create:
+        success: 'Тест успешно создан.'
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+        no_tests: "Тестов пока нет"
+        new_test: "Новый тест"
+      show:
+        level: "Уровень: %{level}"
+        category: "Категория: %{category}"
+        author: "Автор: %{first_name} %{last_name}"
+        edit: "Редактировать тест"
+        questions: "Список вопросов"
+        body: "Вопрос"
+        actions: "Действия"
+        no_questions: "Вопросов для этого теста еще нет"
+        new_question: "Новый вопрос"
+        back: "Назад"
+      edit:
+        header: "Создание нового теста"
+        back: "Назад"
+      new:
+        header: "Редактирование"
+        back: "Назад"
+      test:
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+    questions:
+      question:
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+
+  users:
+    create:
+      hello: "Привет, %{first_name}!"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест на TestGuru!"
+
+  tests_helper:
+    very_easy: "очень легко"
+    easy: "легко"
+    medium: "средне"
+    hard: "тяжело"
+    very_hard: "очень тяжело"
+    extreme: "экстремально"
+    god: "бог"
+
+  test_passages_helper:
+    success: "Тест пройден"
+    fail: "Тест провален"

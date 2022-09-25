@@ -1,9 +1,9 @@
 module TestPassagesHelper
   def result_message(test_passage)
     if test_passage.success?
-      "<p class='green-text'>Test passed</p>".html_safe
+      "<p class='green-text'>#{I18n.t('.test_passages_helper.success')}</p>".html_safe
     else
-      "<p class='red-text'>Test failed</p>".html_safe
+      "<p class='red-text'>#{I18n.t('.test_passages_helper.fail')}</p>".html_safe
     end
   end
 

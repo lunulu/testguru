@@ -1,16 +1,16 @@
-<h2>Tricky tests</h2>
+<h2><%= t('.header') %></h2>
 
 <% if Test.all.present? %>
   <table>
     <tr>
-      <th>Title</th>
-      <th>Level</th>
-      <th>Questions</th>
-      <th>Action</th>
+      <th><%= t('.title') %></th>
+      <th><%= t('.level') %></th>
+      <th><%= t('.questions') %></th>
+      <th><%= t('.actions') %></th>
     </tr>
 
     <%= render @tests %>
 <% else %>
-  <p>There is no tests yet.</p>
+  <p><%= t('.no_tests') %></p>
 <% end %>
 </table>
