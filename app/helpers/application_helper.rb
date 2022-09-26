@@ -10,8 +10,10 @@ module ApplicationHelper
   def flashes
     return unless flash.any?
 
+    types = { alert: :danger, notice: :success }
+
     flash.map do |type, message|
-      content_tag :p, message, class: "flash #{type}"
+      content_tag :div, message, class: "col col-md-4 text-center alert alert-#{types[type.to_sym]}", role: 'alert'
     end.join.html_safe
   end
 end

@@ -17,9 +17,10 @@ ru:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
-        one: "Обнаружено %{count} ошибка"
-        other: "Обнаружен %{count} ошибки"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
     nav:
+      header: "Панель Админа"
       welcome: "Добро пожаловать"
       settings: "Настройки"
       logout: "Выйти"
@@ -50,11 +51,6 @@ ru:
       question_counter: "Вопрос %{current} из %{total}"
 
   admin:
-    nav:
-      header: "Панель Админа TestGuru"
-      welcome: "Добро пожаловать"
-      settings: "Настройки"
-      logout: "Выйти"
     tests:
       create:
         success: 'Тест успешно создан.'
@@ -78,10 +74,10 @@ ru:
         new_question: "Новый вопрос"
         back: "Назад"
       edit:
-        header: "Создание нового теста"
+        header: "Редактирование"
         back: "Назад"
       new:
-        header: "Редактирование"
+        header: "Создание нового теста"
         back: "Назад"
       test:
         edit: "Редактировать"
