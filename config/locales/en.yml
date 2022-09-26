@@ -17,8 +17,6 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
-    header:
-      header: "Main Page"
     nav:
       welcome: "Welcome"
       settings: "Settings"

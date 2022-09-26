@@ -19,8 +19,6 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружен %{count} ошибки"
-    header:
-      header: "Главная страница"
     nav:
       welcome: "Добро пожаловать"
       settings: "Настройки"
