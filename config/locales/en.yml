@@ -17,9 +17,8 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
-    header:
-      header: "Main Page"
     nav:
+      header: "Admin Panel"
       welcome: "Welcome"
       settings: "Settings"
       logout: "Logout"
@@ -50,11 +49,6 @@ en:
       question_counter: "Question %{current} of %{total}"
 
   admin:
-    nav:
-      header: "TestGuru Admin Panel"
-      welcome: "Welcome"
-      settings: "Settings"
-      logout: "Logout"
     tests:
       create:
         success: 'Test was successfully created.'
@@ -78,10 +72,10 @@ en:
         new_question: "New question"
         back: "Back"
       edit:
-        header: "Create new test"
+        header: "Edit test"
         back: "Back"
       new:
-        header: "Edit test"
+        header: "Create new test"
         back: "Back"
       test:
         edit: "Edit"
