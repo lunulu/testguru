@@ -22,6 +22,7 @@
       <% end %>
 
       <p class="text-center mb-0"><%= t('.question_counter', current: current_question_number(@test_passage), total: @test_passage.test.questions.count) %></p>
+      <p class="text-end mb-0"><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
     </div>
   </div>
 </div>

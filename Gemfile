@@ -31,6 +31,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+# NETWORKING
+
+gem 'faraday'
+
 # LOCALIZATION
 
 gem 'rails-i18n'
