@@ -48,7 +48,7 @@ en:
       next: "Next"
       question_counter: "Question %{current} of %{total}"
     gist:
-      success: "Gist was successfully created!"
+      success: " was successfully created!"
       failure: "An error occurred while saving gist"
 
   admin:
@@ -89,6 +89,17 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+    gists:
+      index:
+        header: "All gists"
+        question_body: "Question body"
+        user_email: "User email"
+        links: "Links"
+        actions: "Actions"
+      gist:
+        link: "Link"
+        delete: "Delete gist"
+        confirm: "Are you sure?"
 
   users:
     create:
@@ -110,3 +121,7 @@ en:
   test_passages_helper:
     success: "Test passed"
     fail: "Test failed"
+
+  gist_question_service:
+    gist_params:
+      description: "A question about %{title} from TestGuru"

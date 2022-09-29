@@ -50,7 +50,7 @@ ru:
       next: "Дальше"
       question_counter: "Вопрос %{current} из %{total}"
     gist:
-      success: "Gist успешно сохранён!"
+      success: " успешно создан!"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
@@ -91,6 +91,17 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+    gists:
+      index:
+        header: "Все gist"
+        question_body: "Тело вопроса"
+        user_email: "Почта пользователя"
+        links: "Ссылки"
+        actions: "Действия"
+      gist:
+        link: "Ссылка"
+        delete: "Удалить gist"
+        confirm: "Вы уверены?"
 
   users:
     create:
@@ -112,3 +123,7 @@ ru:
   test_passages_helper:
     success: "Тест пройден"
     fail: "Тест провален"
+
+  gist_question_service:
+    gist_params:
+      description: "Вопрос из теста %{title} на сайте TestGuru"
