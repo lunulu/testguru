@@ -6,7 +6,8 @@ class Admin::GistsController < Admin::BaseController
   def destroy
     @gist = Gist.find(params[:id])
 
-    @gist.destroy if GistQuestionService.new(@gist).delete_gist
+    service = GistQuestionService.new
+    @gist.destroy if service.delete_gist(gist: @gist)
 
     redirect_to admin_gists_path
   end

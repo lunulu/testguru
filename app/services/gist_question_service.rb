@@ -1,20 +1,30 @@
 class GistQuestionService
-  def initialize(gist, client: nil)
-    @gist = gist
-    @question = @gist.question
-    @test = @gist.question.test
-    @user = @gist.user
+  def initialize(client: nil)
     @client = client || Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
   end
 
-  def create_gist
-    @client.create_gist(gist_params)
+  def create_gist(question:, user:)
+    @question = question
+    @test = @question.test
+    @user = user
 
-    @client.last_response
+    @resource = @client.create_gist(gist_params)
+
+    if @client.last_response.status == 201
+      @gist = Gist.create(question: @question, user: @user, gist_id: @resource[:id])
+    end
   end
 
-  def delete_gist
-    @client.delete_gist(@gist.gist_id)
+  def success?
+    @client.last_response.status.between?(200,299)
+  end
+
+  def html_url
+    @resource[:html_url]
+  end
+
+  def delete_gist(gist:)
+    @client.delete_gist(gist.gist_id)
   end
 
   private
@@ -34,5 +44,5 @@ class GistQuestionService
     content = [@question.body]
     content += @question.answers.pluck(:body)
     content.join("\n")
-    end
+  end
 end
