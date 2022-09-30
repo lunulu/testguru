@@ -10,7 +10,7 @@ class GistQuestionService
 
     @resource = @client.create_gist(gist_params)
 
-    if @client.last_response.status == 201
+    if success?
       @gist = Gist.create(question: @question, user: @user, gist_id: @resource[:id])
     end
   end
