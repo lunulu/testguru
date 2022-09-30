@@ -13,7 +13,7 @@ module ApplicationHelper
     types = { alert: :danger, notice: :success }
 
     flash.map do |type, message|
-      content_tag :div, message, class: "col col-md-4 text-center alert alert-#{types[type.to_sym]}", role: 'alert'
+      content_tag :div, message.html_safe, class: "col col-md-4 text-center alert alert-#{types[type.to_sym]}", role: 'alert'
     end.join.html_safe
   end
 end
