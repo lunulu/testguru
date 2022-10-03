@@ -43,6 +43,7 @@ gem 'rails-i18n'
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.2.1'
+gem 'octicons_helper'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
