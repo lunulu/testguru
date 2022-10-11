@@ -82,10 +82,11 @@ en:
         back: "Back"
       test:
         edit: "Edit"
+        cancel: "Cancel"
         delete: "Delete"
         confirm: "Are you sure?"
       form_inline:
-        submit: "OK"
+        submit: "Save"
     questions:
       question:
         edit: "Edit"

@@ -84,10 +84,11 @@ ru:
         back: "Назад"
       test:
         edit: "Редактировать"
+        cancel: "Отмена"
         delete: "Удалить"
         confirm: "Вы уверены?"
       form_inline:
-        submit: "ОК"
+        submit: "Сохранить"
     questions:
       question:
         edit: "Редактировать"
