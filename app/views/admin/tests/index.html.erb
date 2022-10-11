@@ -4,6 +4,8 @@
 
     <div class="card-body">
 
+      <%= render 'shared/errors', resource: @test %>
+
       <% if Test.all.present? %>
         <table class="table table-hover align-middle">
           <thead>
