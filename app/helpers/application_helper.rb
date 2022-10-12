@@ -7,6 +7,11 @@ module ApplicationHelper
     link_to 'Test Guru', "https://github.com/#{author}/#{repo}"
   end
 
+  def current_translations
+    @translations ||= I18n.backend.send(:translations)
+    @translations[I18n.locale].with_indifferent_access
+  end
+
   def flashes
     return unless flash.any?
 

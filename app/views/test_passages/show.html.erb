@@ -21,8 +21,22 @@
           </div>
       <% end %>
 
-      <p class="text-center mb-0"><%= t('.question_counter', current: current_question_number(@test_passage), total: @test_passage.test.questions.count) %></p>
-      <p class="text-end mb-0"><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
+
+      <div class="progress m-3">
+        <div class="progress-bar"
+             role="progressbar"
+             aria-label="Test passage progress"
+             style="width: <%= progress_bar_percent(@test_passage) %>%"
+             aria-valuenow="<%= current_question_number(@test_passage) %>"
+             aria-valuemax="<%= questions_count(@test_passage) %>>"></div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <p class="text-start col mb-0"><%= t('.question_counter', current: current_question_number(@test_passage), total: questions_count(@test_passage)) %></p>
+          <p class="text-end col mb-0"><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

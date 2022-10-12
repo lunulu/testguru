@@ -25,6 +25,6 @@ class Test < ApplicationRecord
   private
 
   def validate_max_level
-    errors.add(:level, 'Max level is 10') if level.to_i > MAX_LEVEL
+    errors.add(:level, "max is #{MAX_LEVEL}") if level.to_i > MAX_LEVEL
   end
 end

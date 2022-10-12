@@ -4,11 +4,13 @@
 
     <div class="card-body">
 
+      <%= render 'shared/errors', resource: @test %>
+
       <% if Test.all.present? %>
         <table class="table table-hover align-middle">
           <thead>
             <tr>
-              <th class="sort-by-title pointer">
+              <th class="sort-by-title pointer" style="width: 45%">
                 <%= t('.title') %>
                 <%= octicon 'arrow-up', class: 'text-success hide' %>
                 <%= octicon 'arrow-down', class: 'text-success hide' %>
