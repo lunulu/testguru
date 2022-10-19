@@ -1,14 +1,7 @@
-<div class="container fixed-bottom">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
-    <p class="col-md-4 mb-0 text-muted"><%= current_year %> lunulu</p>
-
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto">
-      <%= image_tag('logo.png', width: 25, height: 25) %>
-    </a>
-
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><%= github_url(:lunulu, :testguru) %></li>
-      <li class="nav-item"><%= link_to t('.thinknetica'), 'https://thinknetica.com/', class: 'nav-link px-2 text-muted' %></li>
-    </ul>
-  </footer>
-</div>
+<!--br пока нет стилей-->
+<br><br><br><br><br><br><br><br>
+<p><%= current_year %></p>
+<p>lunulu</p>
+<%= github_url(:lunulu, :testguru) %>
+<p><%= t('.about') %></p>
+<a href="https://thinknetica.com/"><%= t('.thinknetica') %></a>

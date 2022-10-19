@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def github_url(author, repo)
-    link_to 'GitHub', "https://github.com/#{author}/#{repo}", class: 'nav-link px-2 text-muted'
+    link_to 'Test Guru', "https://github.com/#{author}/#{repo}"
   end
 
   def current_translations
