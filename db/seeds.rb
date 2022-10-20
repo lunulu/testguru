@@ -1,4 +1,4 @@
-@admin = Admin.create(first_name: 'Ruslan', last_name: 'Faizullin', email: 'fairus200599@gmail.com', password: '112358')
+@admin = Admin.create(first_name: 'Ruslan', last_name: 'Faizullin', email: 'fairus200599@gmail.com', password: 'a64TPFAt3xrswgU')
 @admin.confirm
 
 @backend = Category.create(title: 'Backend')
