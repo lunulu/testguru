@@ -1,6 +1,6 @@
 <tr>
   <td class="d-grid gap-2"><%= link_to gist.question.body[0, 25], admin_question_path(gist.question), class: 'btn btn-secondary' %></td>
   <td><%= gist.user.email %></td>
-  <td><%= link_to t('.link'), gist.url, class: 'btn btn-primary' %></td>
+  <td><%= link_to t('.link'), gist.url, class: 'btn btn-primary', target: :_blank %></td>
   <td><%= link_to t('.delete'), admin_gist_path(gist), method: :delete, data: {confirm: t('.confirm')}, class: 'btn btn-danger' %></td>
 </tr>
