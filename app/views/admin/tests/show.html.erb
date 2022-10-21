@@ -1,22 +1,39 @@
-<h2><%= @test.title %></h2>
-<p><%= t('.level', level: test_level(@test) ) %></p>
-<p><%= t('.category', category: @test.category.title ) %></p>
-<p><%= t('.author', first_name: @test.author.first_name, last_name: @test.author.last_name) %></p>
+<div class="col col-md-8 mt-3">
+  <div class="card">
+    <h2 class="card-header text-center"><%= @test.title %></h2>
 
-<p><%= link_to t('.edit'), edit_admin_test_path(@test) %></p>
+    <div class="card-body text-center">
+      <p><%= t('.level') %> <%= t("tests_helper.#{test_level(@test)}") %></p>
+      <p><%= t('.category', category: @test.category.title ) %></p>
+      <p><%= t('.author', first_name: @test.author.first_name, last_name: @test.author.last_name) %></p>
 
-<h2><%= t('.questions') %></h2>
-<% if @test.questions.present? %>
-  <table>
-    <tr>
-      <th><%= t('.body') %></th>
-      <th colspan="2"><%= t('.actions') %></th>
-    </tr>
+      <p><%= link_to t('.edit'), edit_admin_test_path(@test), class: 'btn btn-warning' %></p>
 
-    <%= render @test.questions %>
-  </table>
-<% else %>
-  <p><%= t('.no_questions') %></p>
-<% end %>
-<p><%= link_to t('.new_question'), new_admin_test_question_path(@test) %></p>
-<p><%= link_to t('.back'), admin_tests_path %></p>
+      <h3 class="mt-5"><%= t('.questions') %></h3>
+      <% if @test.questions.present? %>
+        <table class="table table-hover align-middle">
+          <thead>
+            <tr>
+              <th><%= t('.body') %></th>
+              <th colspan="2"><%= t('.actions') %></th>
+            </tr>
+          </thead>
+
+          <tbody class="table-group-divider">
+            <%= render @test.questions %>
+          </tbody>
+        </table>
+      <% else %>
+        <p><%= t('.no_questions') %></p>
+      <% end %>
+
+      <p class="text-center mt-3">
+        <%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-warning' %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<p class="text-center mt-3">
+  <%= link_to t('.back'), admin_tests_path, class: 'btn btn-primary' %>
+</p>

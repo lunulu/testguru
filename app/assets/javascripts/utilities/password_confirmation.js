@@ -2,9 +2,11 @@ document.addEventListener('turbolinks:load', function() {
 
     let input1 = document.getElementById('user_password')
     let input2 = document.getElementById('user_password_confirmation')
-
-    if (input1) { input1.addEventListener('keyup', checkPasswords) }
-    if (input2) { input2.addEventListener('keyup', checkPasswords) }
+    
+    if (input1 && input2) {
+        input1.addEventListener('keyup', checkPasswords)
+        input2.addEventListener('keyup', checkPasswords)
+    }
 })
 
 function checkPasswords () {

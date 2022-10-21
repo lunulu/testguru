@@ -67,7 +67,7 @@ ru:
         no_tests: "Тестов пока нет"
         new_test: "Новый тест"
       show:
-        level: "Уровень: %{level}"
+        level: "Уровень:"
         category: "Категория: %{category}"
         author: "Автор: %{first_name} %{last_name}"
         edit: "Редактировать тест"
@@ -95,6 +95,39 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+      show:
+        id: "ID вопроса: %{id}"
+        body: "Тело вопроса: %{body}"
+        answers: "Ответы"
+        new_answer: "Новый ответ"
+        delete: "Удалить"
+        edit: "Редактировать"
+        back: "Назад"
+        confirm: "Вы уверены?"
+      new:
+        back: "Назад"
+      edit:
+        back: "Назад"
+    answers:
+      show:
+        header: "Вопрос"
+        answer: "Ответ:"
+        correct: "Правильный:"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+        edit: "Редактировать"
+        back: "Назад"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      edit:
+        header: "Редактировать ответ"
+        back: "Назад"
+      answer:
+        show: "Посмотреть"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+        edit: "Редактировать"
     gists:
       index:
         header: "Все gist"
@@ -127,6 +160,11 @@ ru:
   test_passages_helper:
     success: "Тест пройден"
     fail: "Тест провален"
+
+  questions_helper:
+    question_header:
+      create: "Создать новый вопрос для теста %{test_title}"
+      edit: "Редактрирование вопроса теста %{test_title}"
 
   gist_question_service:
     gist_params:

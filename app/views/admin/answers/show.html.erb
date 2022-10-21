@@ -1,17 +1,27 @@
-<h2>Question</h2>
 
-<p><%= @answer.question.body %></p>
 
-<p>
-  <b>Answer:</b>
-  <%= @answer.body %>
+<div class="col col-md-8 mt-3">
+  <div class="card text-center">
+    <div class="card-header"><%= @answer.question.body %></div>
+
+    <div class="card-body">
+      <p>
+        <b><%= t('.answer') %></b> <%= @answer.body %>
+      </p>
+
+      <p>
+        <b><%= t('.correct') %></b> <%= @answer.correct %>
+      </p>
+
+      <%= link_to t('.edit'), edit_admin_answer_path(@answer), class: 'btn btn-warning w-25' %>
+      <%= link_to t('.delete'), admin_answer_path(@answer),
+                  method: :delete,
+                  data: { confirm: t('.confirm') },
+                  class: 'btn btn-danger w-25' %>
+    </div>
+  </div>
+</div>
+
+<p class="text-center mt-3">
+  <%= link_to t('.back'), admin_question_path(@answer.question), class: 'btn btn-primary' %>
 </p>
-
-<p>
-  <b>Correct:</b>
-  <%= @answer.correct %>
-</p>
-
-<%= link_to 'Edit', edit_admin_answer_path(@answer) %> |
-<%= link_to 'Delete', admin_answer_path(@answer), method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', admin_question_path(@answer.question) %>
