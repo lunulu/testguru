@@ -3,6 +3,6 @@ class Gist < ApplicationRecord
   belongs_to :user
 
   def url
-    "https://api.github.com/gists/#{gist_id}"
+    "https://gist.github.com/lunulu/#{gist_id}"
   end
 end
