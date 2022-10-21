@@ -1,13 +1,13 @@
 <tr>
-  <td class="d-grid gap-2">
-    <%= link_to "#{test.title}", admin_test_path(test), class: 'btn btn-secondary test-title', data: { test_id: test.id } %>
+  <td>
+    <%= link_to "#{test.title}", admin_test_path(test), class: 'btn btn-secondary w-100 test-title', data: { test_id: test.id } %>
     <%= render 'form_inline', test: test == @test ? @test : test %>
   </td>
   <td><%= t("tests_helper.#{test_level(test)}") %></td>
   <td><%= test.questions.count %></td>
-  <td class="d-grid gap-2"><%= link_to t('.edit.'),
+  <td class><%= link_to t('.edit.'),
                   edit_admin_test_path(test),
                   data: { test_id: test.id },
-                  class: 'btn btn-warning form-inline-link' %></td>
+                  class: 'btn btn-warning w-100 form-inline-link' %></td>
   <td><%= link_to t('.delete.'), admin_test_path(test), method: :delete, data: {confirm: t('.confirm')}, class: 'btn btn-danger' %></td>
 </tr>

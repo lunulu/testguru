@@ -27,6 +27,7 @@ en:
     footer:
       about: "Website for passing various tests"
       thinknetica: "Educational project at Thinknetica online school"
+      feedback: "Feedback"
 
   tests:
     index:
@@ -128,3 +129,8 @@ en:
   gist_question_service:
     gist_params:
       description: "A question about %{title} from TestGuru"
+
+  feedbacks:
+    new:
+      header: 'Feedback Form'
+      submit: 'Send'
