@@ -1,0 +1,19 @@
+<div class="col-6 justify-content-center mt-3">
+  <h2><%= t('.header') %></h2>
+
+  <div class="card border-primary">
+    <div class="card-body">
+      <%= form_with url: feedbacks_path, method: :post do |f| %>
+        <div class="form-group">
+          <p>
+            <%= f.text_area :message, size: 'x10', class: 'w-100 form-control' %>
+          </p>
+
+          <p class="text-center">
+            <%= f.submit t('.submit'), class: 'btn btn-primary text-center' %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

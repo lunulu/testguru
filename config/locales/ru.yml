@@ -29,6 +29,7 @@ ru:
     footer:
       about: "Сайт для прохождения различных тестов"
       thinknetica: "Учебный проект в онлайн-школе Thinknetica"
+      feedback: "Обратная связь"
 
   tests:
     index:
@@ -130,3 +131,8 @@ ru:
   gist_question_service:
     gist_params:
       description: "Вопрос из теста %{title} на сайте TestGuru"
+
+  feedbacks:
+    new:
+      header: 'Форма обратной связи'
+      submit: 'Отправить'
