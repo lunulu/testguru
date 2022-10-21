@@ -1,5 +1,5 @@
 <h2><%= @test.title %></h2>
-<p><%= t('.level', level: test_level(@test) ) %></p>
+<p><%= t('.level') %> <%= t("tests_helper.#{test_level(@test)}") %></p>
 <p><%= t('.category', category: @test.category.title ) %></p>
 <p><%= t('.author', first_name: @test.author.first_name, last_name: @test.author.last_name) %></p>
 

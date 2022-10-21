@@ -1,5 +1,5 @@
 <div class="col-4 justify-content-center mt-3">
-  <h2>Enter the Guru Gates</h2>
+  <h2><%= t('.header') %></h2>
 
   <div class="card border-primary">
     <div class="card-body">
@@ -22,7 +22,7 @@
             </div>
           <% end %>
 
-          <%= f.submit "Enter", class: 'btn btn-primary' %>
+          <%= f.submit t('.enter'), class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>
