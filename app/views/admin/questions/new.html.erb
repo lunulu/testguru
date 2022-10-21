@@ -1,2 +1,15 @@
-<%= render 'form' %>
-<%= link_to t('.back'), admin_test_path(@test) %>
+<div class="col col-md-6 mt-3">
+  <div class="card">
+    <h3 class="card-header">
+      <%= question_header(@question) %>
+    </h3>
+
+    <div class="card-body">
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>
+
+<p class="text-center mt-3">
+  <%= link_to t('.back'), admin_test_path(@test), class: 'btn btn-primary' %>
+</p>

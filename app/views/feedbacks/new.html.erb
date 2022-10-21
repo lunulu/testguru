@@ -1,6 +1,4 @@
-<div class="col col-md-6 justify-content-center mt-3">
-
-
+<div class="col col-md-6 mt-3">
   <div class="card text-center">
     <h2 class="card-header"><%= t('.header') %></h2>
 
@@ -8,7 +6,7 @@
       <%= form_with url: feedbacks_path, method: :post do |f| %>
         <div class="form-group">
           <p>
-            <%= f.text_area :message, size: 'x10', class: 'w-100 form-control', style: 'resize: none' %>
+            <%= f.text_area :message, rows: 10, class: 'w-100 form-control', style: 'resize: none' %>
           </p>
 
           <p class="text-center">
