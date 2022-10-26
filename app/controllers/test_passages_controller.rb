@@ -4,7 +4,10 @@ class TestPassagesController < ApplicationController
 
   def show; end
 
-  def result; end
+  def result
+    service = AchieveBadgeService.new(user: current_user)
+    service.check_badges
+  end
 
   def update
     @test_passage.accept!(params[:answer_ids])

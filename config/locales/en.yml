@@ -24,6 +24,8 @@ en:
       logout: "Logout"
       sign_up: "Sign Up"
       login: "Login"
+      badges: "Badges"
+      badges_management: "Badges management"
     footer:
       about: "Website for passing various tests"
       thinknetica: "Educational project at Thinknetica online school"
@@ -137,6 +139,11 @@ en:
         link: "Link"
         delete: "Delete gist"
         confirm: "Are you sure?"
+    badges:
+      create:
+        success: "Badge was successfully created"
+      index:
+        header: "All badges"
 
   users:
     create:
@@ -172,3 +179,8 @@ en:
     new:
       header: 'Feedback Form'
       submit: 'Send'
+  badges:
+    index:
+      header: "Your badges"
+      no_badges: "You don't have badges yet"
+      header-2: "All badges"

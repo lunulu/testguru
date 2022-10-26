@@ -26,6 +26,8 @@ ru:
       logout: "Выйти"
       sign_up: "Регистрация"
       login: "Войти"
+      badges: "Значки"
+      badges_management: "Управление значками"
     footer:
       about: "Сайт для прохождения различных тестов"
       thinknetica: "Учебный проект в онлайн-школе Thinknetica"
@@ -139,6 +141,11 @@ ru:
         link: "Ссылка"
         delete: "Удалить gist"
         confirm: "Вы уверены?"
+    badges:
+      create:
+        success: "Значок успешно создан"
+      index:
+        header: "Все значки"
 
   users:
     create:
@@ -174,3 +181,8 @@ ru:
     new:
       header: 'Форма обратной связи'
       submit: 'Отправить'
+  badges:
+    index:
+      header: "Ваши значки"
+      no_badges: "У вас пока нет значков"
+      header-2: "Все значки"
