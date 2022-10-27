@@ -17,23 +17,10 @@
       <%= form.label :image_location %>
     </p>
 
-    <p class="form-floating">
-      <%= form.text_field :rule_name, class: 'form-control', placeholder: "Rule name" %>
-      <%= form.label :rule_name %>
+    <p>
+      <%= form.label :rule_name %>:
+      <%= form.select :rule_name, AchieveBadgeService.rules, {prompt: true}, {class: "form-select"} %>
     </p>
-
-<!--    TODO: Сделать так, чтобы доступные варианты были селектом-->
-    <ul class="list-group list-group-flush mb-5">
-      >>> TMP
-      <li class="list-group-item">category_all_by_title</li>
-      <li class="list-group-item">category_count</li>
-      <li class="list-group-item">test_count</li>
-      <li class="list-group-item">test_first_success</li>
-      <li class="list-group-item">test_all_by_level</li>
-      <li class="list-group-item">test_first_try</li>
-      <li class="list-group-item">tests_count_by_category</li>
-      >>>
-    </ul>
 
     <p class="form-floating">
       <%= form.text_field :rule_value, class: 'form-control', placeholder: "Rule Value" %>

@@ -1,12 +1,12 @@
 class AchieveBadgeService
-  def initialize(user:)
-    @user = user
-  end
-
-  def check_badges
-    Badge.all.each do |badge|
+  def check_badges(user:)
+    Badge.find_each do |badge|
       send(badge.rule_name + '_rule', badge.rule_value, badge)
     end
+  end
+
+  def self.rules
+    private_instance_methods(false).map(&:to_s).filter { |name| name.include? '_rule' }.map { |name| name.delete_suffix('_rule')}.sort
   end
 
   private
