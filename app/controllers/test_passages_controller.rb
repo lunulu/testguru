@@ -12,8 +12,7 @@ class TestPassagesController < ApplicationController
     if @test_passage.completed?
       TestsMailer.completed_test(@test_passage).deliver_now
 
-      service = AchieveBadgeService.new
-      service.check_badges(user: current_user)
+      AchieveBadgeService.call(user: current_user)
 
       redirect_to result_test_passage_path(@test_passage)
     else
