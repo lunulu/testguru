@@ -1,0 +1,39 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <div class="form-group">
+    <p class="form-floating">
+      <%= form.text_field :title, class: 'form-control', placeholder: "Title" %>
+      <%= form.label :title %>
+    </p>
+
+    <p class="form-floating">
+      <%= form.text_field :description, class: 'form-control', placeholder: "Description" %>
+      <%= form.label :description %>
+    </p>
+
+    <p class="form-floating">
+      <%= form.text_field :image_location, class: 'form-control', placeholder: "Image location" %>
+      <%= form.label :image_location %>
+    </p>
+
+    <p>
+      <%= form.label :rule_name %>:
+      <%= form.select :rule_name, AchieveBadgeService::RULES.keys, {prompt: true}, {class: "form-select"} %>
+    </p>
+
+    <p class="form-floating">
+      <%= form.text_field :rule_value, class: 'form-control', placeholder: "Rule Value" %>
+      <%= form.label :rule_value %>
+    </p>
+
+    <p class="form-check">
+      <%= form.check_box :multiple, class: 'form-check-input' %>
+      <%= form.label :multiple, class: 'form-check-label' %>
+    </p>
+
+    <p class="text-center">
+      <%= form.submit class: 'btn btn-warning' %>
+    </p>
+  </div>
+<% end %>

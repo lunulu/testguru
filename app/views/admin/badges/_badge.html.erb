@@ -1,0 +1,13 @@
+<div class="card col p-0">
+  <div class="card-body">
+    <%= image_tag badge.image_location, class: 'img-fluid' %>
+    <h5 class="card-title mt-2"><%= badge.title %></h5>
+    <div class="card-text"><%= badge.description %></div>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col"><%= link_to t('.edit'), edit_admin_badge_path(badge), class: 'btn btn-warning w-100' %></div>
+        <div class="col"><%= link_to t('.delete.'), admin_badge_path(badge), method: :delete, data: {confirm: t('.confirm')}, class: 'btn btn-danger w-100' %></div>
+      </div>
+    </div>
+  </div>
+</div>

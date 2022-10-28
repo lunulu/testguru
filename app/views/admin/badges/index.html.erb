@@ -1,0 +1,19 @@
+<div class="col-10 mt-5">
+  <div class="card text-center">
+    <div class="card-header">
+      <div class="d-grid gap-2 d-md-flex align-items-center">
+        <div class="h2 me-auto"><%= t('.header') %></div>
+        <div><%= link_to t('.new_badge'), new_admin_badge_path, class: 'btn btn-primary mt-0' %></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <% if Badge.all.present? %>
+        <div class="container">
+          <div class="row row-cols-2 row-cols-md-4">
+            <%= render @badges %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

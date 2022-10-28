@@ -18,6 +18,13 @@ en:
       answer:
         body: "Body"
         correct: "Correct"
+      badge:
+        title: "Title"
+        description: "Description"
+        image_location: "Image URL"
+        rule_name: "Rule name"
+        rule_value: "Rule value"
+        multiple: "Multiple"
 
 
     errors:

@@ -18,6 +18,13 @@ ru:
       answer:
         body: "Тело ответа"
         correct: "Правильный"
+      badge:
+        title: "Название"
+        description: "Описание"
+        image_location: "Ссылка на изображение"
+        rule_name: "Название правила"
+        rule_value: "Значение правила"
+        multiple: "Многократное"
 
     errors:
       messages:
