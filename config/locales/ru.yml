@@ -52,6 +52,7 @@ ru:
       header: "Прохождение теста %{title}"
       next: "Дальше"
       question_counter: "Вопрос %{current} из %{total}"
+      time_limit: "Оставшееся время (сек):"
     gist:
       success: " успешно создан!"
       failure: "Во время сохранения gist произошла ошибка"

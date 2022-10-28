@@ -17,6 +17,11 @@
       <%= form.collection_select :category_id, Category.all, :id, :title, {prompt: true}, {class: "form-select"} %>
     </p>
 
+    <p class="form-floating">
+      <%= form.text_field :time_limit, class: 'form-control', placeholder: "Time Limit" %>
+      <%= form.label :time_limit %>
+    </p>
+
     <p class="text-center">
       <%= form.submit class: 'btn btn-warning' %>
     </p>

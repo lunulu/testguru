@@ -9,6 +9,7 @@ ru:
       test:
         title: "Название"
         category: "Категория"
+        time_limit: "Ограничение по времени (в секундах)"
       user:
         first_name: "Имя"
         last_name: "Фамилия"
