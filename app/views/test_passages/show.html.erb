@@ -33,7 +33,13 @@
 
       <div class="container">
         <div class="row">
-          <p class="text-start col mb-0"><%= t('.question_counter', current: current_question_number(@test_passage), total: questions_count(@test_passage)) %></p>
+          <p class="text-start col mb-0">
+            <% if @test_passage.test.time_limit > 0 %>
+              <%= t('.time_limit') %>
+              <%= content_tag :span, @test_passage.time_left, class: 'timer' %>
+            <% end %>
+          </p>
+          <p class="text-center col mb-0"><%= t('.question_counter', current: current_question_number(@test_passage), total: questions_count(@test_passage)) %></p>
           <p class="text-end col mb-0"><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
         </div>
       </div>

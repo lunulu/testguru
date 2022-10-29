@@ -50,6 +50,7 @@ en:
       header: "Passing the %{title} Test"
       next: "Next"
       question_counter: "Question %{current} of %{total}"
+      time_limit: "Time left (sec):"
     gist:
       success: " was successfully created!"
       failure: "An error occurred while saving gist"

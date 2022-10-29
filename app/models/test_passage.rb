@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   before_update :before_update_set_next_question
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_is_left?
   end
 
   def success?
@@ -23,7 +23,19 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def end_time
+    created_at + test.time_limit
+  end
+
+  def time_left
+    (end_time - Time.current).round
+  end
+
   private
+
+  def time_is_left?
+    Time.current >= end_time
+  end
 
   def before_validation_set_first_question
     self.current_question = test.questions.first if test.present?
