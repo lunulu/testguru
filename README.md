@@ -1,34 +1,6 @@
-# README
+Учебный проект Thinknetica
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Можно создавать и проходить тесты. Реализована аутентификация, работа с Gist API, мэйлер, прохождение тестов на время, система достижений.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Пользователь
-
-Категория
-
-Тест
-
-Вопрос
-
-Ответ
+Логин: fairus200599@gmail.com
+Пароль: a64TPFAt3xrswgU
