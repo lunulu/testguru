@@ -34,7 +34,7 @@ class TestPassage < ApplicationRecord
   private
 
   def time_is_left?
-    Time.current >= end_time
+    Time.current >= end_time && test.time_limit > 0
   end
 
   def before_validation_set_first_question
